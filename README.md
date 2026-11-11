@@ -1,4 +1,4 @@
-# LYNX COLD ❄️ — Standalone MIDI Controller für LYNX SHARE
+# LYNX COLD ❄️ — Standalone MIDI Controller for LYNX SHARE
 
 ![Version](https://img.shields.io/badge/Version-1.1.0--nov.--2026-blue?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen?style=for-the-badge)
@@ -6,117 +6,117 @@
 ![Python](https://img.shields.io/badge/Python-3.8+-yellow?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-> **Das eiskalte, nordische Gegenstück zum originalen FL Studio Fire — von Grund auf als nativer, hochpräziser Standalone-Controller für die LYNX SHARE DAW entwickelt.**
+> **The icy, Nordic counterpart to the original FL Studio Fire — built from the ground up as a native, high-precision standalone controller for the LYNX SHARE DAW.**
 
 ---
 
-## ❄️ 1. Die Idee (Was und Warum?)
+## ❄️ 1. The Idea (What and Why?)
 
-Der Akai Fire Controller ist ein geniales Stück Studio-Hardware, war bisher jedoch fest an FL Studio gekoppelt. Wird er an einer alternativen DAW wie **LYNX SHARE** angeschlossen, bleibt die Hardware meist dunkel und stumm.
+The Akai Fire controller is a brilliant piece of studio hardware, but it has historically been tightly bound to FL Studio. When plugged into an alternative DAW like **LYNX SHARE**, the hardware typically stays dark and silent.
 
-**LYNX COLD** befreit den Controller:  
-Es fungiert als eigenständiger, latenzfreier Windows-Hintergrund-Agent, der die Hardware per USB ansteuert, die 64 RGB-Pads in ein interaktives Piano-Keyboard verwandelt, alle Drehregler glättet und die gesamte Transport- und Browser-Navigation für **LYNX SHARE** nutzbar macht.
+**LYNX COLD** sets the controller free:  
+It acts as an independent, latency-free Windows background agent that drives the hardware via USB, turns the 64 RGB pads into an interactive piano keyboard, smooths out all rotary knobs, and makes the entire transport and browser navigation usable for **LYNX SHARE**.
 
-* **Autor:** [@oneDMB](https://github.com/oneDMB) 🦊 (C) 2026
+* **Author:** [@oneDMB](https://github.com/oneDMB) 🦊 (C) 2026
 * **Partner / Co-Dev:** [@deftivity](https://github.com/deftivity) 🤠
-* **Entwickelt für:** [LYNX SHARE DAW](https://github.com/lynx-share)
+* **Developed for:** [LYNX SHARE DAW](https://github.com/lynx-share)
 
 ---
 
-## ✨ 2. Der aktuelle Status (Features in Version 1.1.0)
+## ✨ 2. Current Status (Features in Version 1.1.0)
 
-Alles in Version 1.1.0 läuft out-of-the-box stabil:
+Everything in version 1.1.0 runs stably out of the box:
 
-### 🎹 Dual-Keyboard Note-Modus
-* **64 anschlagdynamische RGB-Pads:** Aufgeteilt in zwei übereinanderliegende Oktaven (untere und obere Oktave wie zwei Manuale).
-* **Live-Farbschema-Umschaltung:**
-  * **Alt-Colors (Lynx Cold Look — Standard):** Halbtöne in Eisblau/Cyan (`#00FFFF`), Grundtöne (C) in Orange-Rot (`#FF4000`), Ganztöne in Weiß.
-  * **Standard-Look:** Halbtöne in Bernstein (`#FF4000`), Grundtöne (C) in Lime-Grün (`#9CFF00`).
-  * *Umschalten:* Einfach die Taste **`NOTE`** am Controller drücken oder per Klick im Taskleisten-Menü!
-* **No Stuck Notes:** Intelligentes Noten-Tracking verhindert hängende Töne bei Oktavsprüngen während des Spielens.
-* **Oktav-Schalter:** **`GRID ◄`** und **`GRID ►`** transponieren die Tastatur um `±12` Halbtöne und leuchten beim Drücken rot auf.
+### 🎹 Dual-Keyboard Note Mode
+* **64 Velocity-Sensitive RGB Pads:** Split into two overlapping octaves (lower and upper octave like two manuals).
+* **Live Color Scheme Switching:**
+  * **Alt-Colors (Lynx Cold Look — Default):** Semitones in ice blue/cyan (`#00FFFF`), root notes (C) in orange-red (`#FF4000`), whole tones in white.
+  * **Standard-Look:** Semitones in amber (`#FF4000`), root notes (C) in lime green (`#9CFF00`).
+  * *Switching:* Simply press the **`NOTE`** button on the controller or click via the tray menu!
+* **No Stuck Notes:** Intelligent note tracking prevents hanging notes during octave shifts while playing.
+* **Octave Switches:** **`GRID ◄`** and **`GRID ►`** transpose the keyboard by `±12` semitones and light up red when pressed.
 
-### 🎛️ Echte Studio-Drehregler (Stufenlos 0–127)
-* **Kein An/Aus-Springen:** Relative Drehticks werden intern in eine saubere, analoge Potentiometer-Kurve von `0` bis `127` umgewandelt.
-* **Touch-Sensor-Filter:** Die kapazitiven Berührungssensoren der Knöpfe werden gefiltert, sodass LYNX SHARE bei *MIDI Learn* nicht versehentlich den Touch-Trigger lernt.
-  * **Regler 1:** MIDI CC 16
-  * **Regler 2:** MIDI CC 17
-  * **Regler 3:** MIDI CC 18
-  * **Regler 4:** MIDI CC 19
+### 🎛️ Real Studio Knobs (Stepless 0–127)
+* **No Sudden Jumps:** Relative rotary ticks are internally converted into a clean, analog potentiometer curve from `0` to `127`.
+* **Touch Sensor Filter:** The capacitive touch sensors of the knobs are filtered so that LYNX SHARE does not accidentally learn the touch trigger during *MIDI Learn*.
+  * **Knob 1:** MIDI CC 16
+  * **Knob 2:** MIDI CC 17
+  * **Knob 3:** MIDI CC 18
+  * **Knob 4:** MIDI CC 19
 
-### 📂 Intelligente Browser-Steuerung (Select-Rad)
-* **Drehen (Rechts / Links):** Scrollt im LYNX-Browser nach unten bzw. oben.
-* **Select-Knopf drücken:**
-  * **1. Klick:** Klappt den gewählten Ordner auf (`Pfeiltaste Rechts`).
-  * **2. Klick:** Klappt den Ordner wieder zu (`Pfeiltaste Links`).
-  * **Mit Shift:** Erzwingt das Schließen des Ordners.
-* **BROWSER-Taste:** Öffnet und schließt die Browserleiste (`Alt + F8` mit Entprellungsschutz).
+### 📂 Intelligent Browser Navigation (Select Wheel)
+* **Rotate (Right / Left):** Scrolls down or up in the LYNX browser.
+* **Press Select Button:**
+  * **1st Click:** Expands the selected folder (`Right Arrow`).
+  * **2nd Click:** Collapses the folder again (`Left Arrow`).
+  * **With Shift:** Forces the folder to close.
+* **BROWSER Button:** Opens and closes the browser sidebar (`Alt + F8` with debounce protection).
 
-### ⏯️ Vollwertige Transport-Sektion
-* **`PLAY`:** Dunkelorange im Standby. Blinkt bei Wiedergabe im 4/4-Takt (**1. Schlag Hellorange, Schläge 2–4 Hellgrün**).
-* **`STOP`:** Aus im Standby, dunkelorange bei Play. Stoppt die DAW zuverlässig per Leertaste und setzt alle LEDs zurück.
-* **`RECORD`:** Dunkelorange im Standby, schaltet bei Aufnahme auf **reines Rot**.
-* **`PAT/SONG`:** **Hellorange** im Pattern-Modus, **Hellgrün** im Song-Modus (`Taste L`). Mit `SHIFT` = Metronom an/aus (`Strg + M`).
-* **`PATTERN ▲ / ▼`:** Schaltet durch die Patterns (`NumPad +` / `-`). Mit `SHIFT + ▼` = Neues leeres Pattern (`F4`).
+### ⏯️ Full-Featured Transport Section
+* **`PLAY`:** Dark orange in standby. Flashes during playback in a 4/4 beat (**1st beat bright orange, beats 2–4 bright green**).
+* **`STOP`:** Off in standby, dark orange during play. Stops the DAW reliably via Spacebar and resets all LEDs.
+* **`RECORD`:** Dark orange in standby, switches to **pure red** when recording.
+* **`PAT/SONG`:** **Bright orange** in Pattern mode, **bright green** in Song mode (`Key L`). With `SHIFT` = Metronome on/off (`Ctrl + M`).
+* **`PATTERN ▲ / ▼`:** Steps through patterns (`NumPad +` / `-`). With `SHIFT + ▼` = New empty pattern (`F4`).
 
-### ❄️ Hintergrund-Agent mit Tray-Icon
-* Läuft als **`.pyw` komplett ohne schwarzes Konsolenfenster**.
-* Eigenes eisblaues **❄️-Symbol** in der Windows-Taskleiste neben der Uhr.
-* Rechtsklick-Menü mit **About-Dialog**, **Farbschema-Umschalter**, **GitHub-Direktlinks** und **Beenden-Befehl**.
+### ❄️ Background Agent with Tray Icon
+* Runs as a **`.pyw` completely without a black console window**.
+* Dedicated ice-blue **❄️ icon** in the Windows taskbar next to the clock.
+* Right-click menu with **About dialog**, **Color scheme switcher**, **Direct GitHub links**, and **Exit command**.
 
 ---
 
-## 🚀 3. Einfache Installation
+## 🚀 3. Easy Installation
 
-### Voraussetzungen
-1. **Windows 10 oder 11 (64-Bit)**
-2. **Python 3.8+** (Bei der Installation den Haken bei *„Add Python to PATH“* setzen)
-3. Der virtuelle MIDI-Treiber **loopMIDI** (oder das teVirtualMIDI SDK) muss auf dem PC installiert sein. *(Das Programm loopMIDI muss nicht zwingend aktiv laufen, nur der Treiber wird benötigt).*
+### Prerequisites
+1. **Windows 10 or 11 (64-bit)**
+2. **Python 3.8+** (Make sure to check *"Add Python to PATH"* during installation)
+3. The virtual MIDI driver **loopMIDI** (or the teVirtualMIDI SDK) must be installed on your PC. *(loopMIDI does not need to be actively running; only the driver is required).*
 
-### Schritt 1: Benötigte Bibliotheken installieren
-Öffne die Windows-Eingabeaufforderung (`cmd`) und installiere die Abhängigkeiten mit folgendem Befehl:
+### Step 1: Install Required Libraries
+Open the Windows Command Prompt (`cmd`) and install the dependencies with the following command:
 
 ```bash
 pip install mido python-rtmidi pystray Pillow
 ```
 
-### Schritt 2: Skript starten
-1. Lade die Datei `lynx_cold_midi_controller.pyw` herunter.
-2. Starte sie einfach per Doppelklick.
-3. *(Es öffnet sich kein störendes Fenster – das ❄️-Icon erscheint direkt neben der Windows-Uhr und der Controller leuchtet auf).*
+### Step 2: Start the Script
+1. Download the `lynx_cold_midi_controller.pyw` file.
+2. Simply start it with a double click.
+3. *(No distracting window will open — the ❄️ icon appears directly next to the Windows clock, and the controller lights up).*
 
-> **💡 Tipp (Autostart):** Drücke `Win + R`, tippe `shell:startup` ein und lege eine Verknüpfung der `.pyw`-Datei hinein. LYNX COLD startet dann bei jedem PC-Start automatisch im Hintergrund!
+> **💡 Tip (Autostart):** Press `Win + R`, type `shell:startup`, and place a shortcut of the `.pyw` file inside. LYNX COLD will then automatically launch in the background every time your PC starts!
 
-### Schritt 3: In LYNX SHARE aktivieren
-1. Starte LYNX SHARE.
-2. Öffne die MIDI-Einstellungen.
-3. Aktiviere unter den MIDI-Eingängen den Eintrag: **`👉 Lynx Cold MIDI Controller`**.
-4. Fertig! Du kannst sofort losspielen.
-
----
-
-## 🗺️ 4. Roadmap & Ausblick (Entwickler gesucht!)
-
-Version 1.1.0 ist das solide Fundament als Controller & Keyboard. Für zukünftige Releases sind folgende Meilensteine geplant:
-
-* **v1.2.0:** Drum-Modus (16-Pad FPC-Layout für Drum-Sampler & Slicex mit Bank A/B).
-* **v1.3.0:** Step-Sequenzer-Modus (Lauflicht-Feedback der Channel-Rack-Steps über die Pads).
-* **v2.0.0:** OLED-Display Emulation (Darstellung von Preset-Namen, Track-Labels und VU-Metern über SysEx).
-* **Future:** Performance-Modus (Clip-Launching aus der Playlist).
+### Step 3: Enable in LYNX SHARE
+1. Launch LYNX SHARE.
+2. Open the MIDI settings.
+3. Enable the following entry under MIDI inputs: **`👉 Lynx Cold MIDI Controller`**.
+4. Done! You can start playing right away.
 
 ---
 
-## 🤝 Mitwirken / Contributing
+## 🗺️ 4. Roadmap & Outlook (Developers Wanted!)
 
-Du programmierst in Python, C++ oder entwickelst an LYNX SHARE mit? Pull Requests und Feedback sind herzlich willkommen!  
-Forke das Repository, erstelle einen Branch und gestalte LYNX COLD mit uns weiter!
+Version 1.1.0 serves as a solid foundation as a controller & keyboard. The following milestones are planned for future releases:
+
+* **v1.2.0:** Drum Mode (16-pad FPC layout for drum samplers & Slicex with Bank A/B).
+* **v1.3.0:** Step Sequencer Mode (running light feedback of channel rack steps via the pads).
+* **v2.0.0:** OLED Display Emulation (displaying preset names, track labels, and VU meters via SysEx).
+* **Future:** Performance Mode (clip launching from the playlist).
 
 ---
 
-## 📦 5. Lizenz & Disclaimer
+## 🤝 Contributing
 
-* **Autoren:** [@oneDMB](https://github.com/oneDMB) 🦊 & [@deftivity](https://github.com/deftivity) 🤠
-* **Lizenz:** Lizenziert unter der [MIT License](LICENSE).
+Do you program in Python, C++, or contribute to LYNX SHARE? Pull requests and feedback are very welcome!  
+Fork the repository, create a branch, and help shape the future of LYNX COLD with us!
+
+---
+
+## 📦 5. License & Disclaimer
+
+* **Authors:** [@oneDMB](https://github.com/oneDMB) 🦊 [@deftivity](https://github.com/deftivity) 🤠
+* **License:** Licensed under the [MIT License](LICENSE).
 
 ### Disclaimer
 *This project is an independent open-source tool developed for Lynx Share and is not affiliated with, sponsored by, or endorsed by inMusic Brands, Inc. or Akai Professional. "AKAI" and "Fire" are registered trademarks of their respective owners.*
